@@ -1,5 +1,5 @@
 require('assert');
-var Filter = require('../lib/badwords.js'),
+let Filter = require('../lib/badwords.js'),
 	filter = new Filter(),
 	assert = require('better-assert');
 
@@ -12,6 +12,22 @@ describe('filter', function(){
 		it("Should return false when no bad word is detected",function(){
 			assert(filter.isProfane("wife") === false);
 		});
+
+		it("Should return false for substring that is non-profane",function(){
+				assert(filter.isProfane("japanese") === false);
+		});
+
+    it("Should detect this slur",function(){
+      assert(filter.isProfane("jap"));
+    });
+
+    it("Should return false for substring that is a legitimate last name",function(){
+      assert(filter.isProfane("Holcum") === false);
+    });
+
+    it("Should detect an exact match of a word that is bad by itself",function(){
+      assert(filter.isProfane("cum"));
+    });
 
 		it("Should be able to detect a bad word in a sentence",function(){
 			assert(filter.isProfane("that person is an ash0le"));
@@ -26,7 +42,7 @@ describe('filter', function(){
 		});
 
 		it('Should detect filtered words regardless of type case', function() {
-			var filter = new Filter({
+			let filter = new Filter({
 				list: ['Test']
 			});
 			assert(filter.isProfane('test'));

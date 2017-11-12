@@ -1,14 +1,15 @@
-# bad-words
+# bad-words-relaxed
 
-A javascript filter for badwords
+A more relaxed javascript filter for badwords.  Will not filter
+legitimate words like "japanese" or "assimilate"
 
 ## Installation
 
-    npm install bad-words
+    npm install bad-words-relaxed
 
 ## Usage
 
-    var Filter = require('bad-words'),
+    var Filter = require('bad-words-relaxed'),
       filter = new Filter();
 
     console.log(filter.clean("Don't be an ash0le")); //Don't be an ******

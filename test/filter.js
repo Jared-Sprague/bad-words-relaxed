@@ -10,7 +10,7 @@ describe('filter', function(){
 		});
 
 		it('Should replace multiple instances of any bad words within a sentence asterisks (******)',function(){
-			assert(filter.clean('cnts ash0le knob xxx') === '**** ****** **** ***');
+			assert(filter.clean('cnts ash0le xxx') === '**** ****** ***');
 		});
 
 		it('Should not replace anything within a sentence if there are no bad words',function(){
@@ -19,7 +19,7 @@ describe('filter', function(){
 
 		it('Should replace a string with proper placeholder when overridden', function(){
 			var customFilter = new Filter({ placeHolder: 'x'});
-			assert(customFilter.clean('This is a hells good test') === 'This is a xxxxx good test');
+			assert(customFilter.clean('This is a fucking good test') === 'This is a xxxxxxx good test');
 		});
 
 		it('Should allow an instance of filter with an empty blacklist', function() {

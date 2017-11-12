@@ -1,7 +1,7 @@
 {
-  "name": "bad-words",
+  "name": "bad-words-relaxed",
   "version": "1.6.1",
-  "description": "A javascript filter for bad words",
+  "description": "A javascript more relaxed filter for bad words",
   "main": "./lib/badwords",
   "directories": {
     "test": "test"
@@ -18,16 +18,18 @@
     "curse",
     "words",
     "profanity",
-    "filter"
+    "filter",
+    "relaxed"
   ],
   "dependencies": {
-    "badwords-list": "^1.0.0"
+    "badwords-list": "^1.0.0",
+    "lodash": "^4.17.4"
   },
   "devDependencies": {
     "better-assert": "1.0.0",
     "documentation": "^5.3.3",
     "mocha": "1.14.0"
   },
-  "author": "Mike P.",
+  "author": "Jared Sprague",
   "license": "MIT"
 }
