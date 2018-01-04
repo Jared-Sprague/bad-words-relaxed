@@ -1,7 +1,7 @@
 # bad-words-relaxed
 
 A more relaxed javascript filter for badwords.  Will not filter
-legitimate words like "japanese" or "assimilate"
+legitimate words like "japanese" or "assimilate".  bad-words-relaxed is forked from [bad-words](https://github.com/web-mech/badwords)
 
 ## Installation
 
