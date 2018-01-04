@@ -1,6 +1,6 @@
 {
   "name": "bad-words-relaxed",
-  "version": "1.6.2",
+  "version": "1.6.3",
   "description": "A javascript more relaxed filter for bad words",
   "main": "./lib/badwords",
   "directories": {
