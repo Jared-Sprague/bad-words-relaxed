@@ -38,9 +38,15 @@ legitimate words like "japanese" or "assimilate".  bad-words-relaxed is forked f
 
     //or
 
-    var filter = new Filter({ list: ['some', 'bad', 'word'] }); 
+    var filter = new Filter({ addList: ['some', 'bad', 'word'] }); 
 
     filter.clean("some bad word!") //**** *** ****!
+
+### Instantiate with custom blacklist
+
+    var filter = new Filter({list: ['some', 'bad', 'word']}); 
+
+    filter.clean("some bad word fuck!") //**** *** **** fuck!
 
 ### Instantiate with an empty list
 
