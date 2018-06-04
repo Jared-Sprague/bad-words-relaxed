@@ -47,5 +47,19 @@ describe('filter', function(){
 			});
 			assert(filter.isProfane('test'));
 		});
+
+		it('Should only detect words from custom list', function() {
+			let filter = new Filter({
+				list: ['test']
+			});
+			assert(filter.isProfane('test') && !filter.isProfane('fuck'));
+		});
+
+		it('Should detect words from custom list and default list', function() {
+			let filter = new Filter({
+				addList: ['test']
+			});
+			assert(filter.isProfane('test') && filter.isProfane('fuck'));
+		});
 	});
 });
